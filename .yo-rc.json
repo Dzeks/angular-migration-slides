@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Angular migration",
+    "packageVersion": "0.0.1",
+    "revealTheme": "black",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "Dzeks",
+    "githubRepository": "angular-migration-slides"
+  }
+}
