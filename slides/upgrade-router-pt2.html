@@ -1,0 +1,20 @@
+<h2>Upgrade router pt2</h2>
+
+<p><pre><code data-trim>
+@NgModule({
+    imports: [
+        RouterModule.forChild([
+            {path: 'help', component: HelpComponent}
+        ])
+    ],
+    declarations: [HelpComponent]
+})
+export class HelpModule {}
+
+// Empty route for ng1
+export let ng1HelpPage = angular.module('helpPage', [])
+    .config( /*@ngInject*/ ($stateProvider) => {
+        $stateProvider.state('help', {url: '/help', template: ''});
+    })
+    .name;
+</code></pre></p>

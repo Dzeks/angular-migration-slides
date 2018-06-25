@@ -1,0 +1,14 @@
+<h2>Upgrade router</h2>
+
+
+<p><pre><code data-trim>
+<application-content></application-content>
+<ui-view></ui-view>
+</code></pre></p>
+<p><pre><code data-trim>
+@Component({
+    selector: 'application-content', 
+    template: '<router-outlet></router-outlet>'
+})
+export class ApplicationContent {}
+</code></pre></p>

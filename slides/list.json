@@ -5,5 +5,8 @@
     "preparation.html",
     "upgrade-path.html",
     "bootstrap.html",
-    "bootstrap-1.html"
+    "bootstrap-1.html",
+    "upgrade-router.html",
+    "upgrade-router-pt2.html",
+    "downgrade-directive.html"
 ]

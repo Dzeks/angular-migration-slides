@@ -1,3 +1,16 @@
-<h2>Upgrade ng1 service</h2>
+<h2>Upgrade & downgrade ng1 service</h2>
 
-<p><pre><code>upgradeAdapter.upgradeNg1Provider('myService');</code></pre></p>
+<p><pre><code>
+@Injectable()
+export class CompanyService {
+    companyId: string;
+    constructor(private api: ApiService) {}
+    getHistory(companyId) {
+        return this.api.get(`/api/companies/${companyId}/history`);
+    }
+}
+export let companyDomain = angular.module('companyDomain', [])
+    .service('companyService', downgradeInjectable(CompanyService))
+    .name;
+</code></pre></p>
+ 

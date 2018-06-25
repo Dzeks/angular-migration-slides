@@ -1,0 +1,19 @@
+<h2>Downgrade directive</h2>
+
+<p><pre><code data-trim>
+@Directive({selector: '[progress]'})
+class ProgressBarDirective {}
+
+function allowAttribute(componentFactory) {
+    const wrapper:any = function($compile, $injector, $parse) {
+        const component = componentFactory($compile, $injector, $parse);
+        component.restrict = "AE";
+        return component;
+    };
+    wrapper.$inject = ["$compile", "$injector", "$parse"];
+    return wrapper;
+}
+export let ng1ProgressName = angular.module('uiProgress', [])
+    .directive('progress', allowAttribute(downgradeComponent({component: ProgressBarDirective})))
+    .name;
+</code></pre></p>

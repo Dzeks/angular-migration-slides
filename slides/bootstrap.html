@@ -5,8 +5,6 @@
 platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
     const injector: Injector = platformRef.injector;
     const upgrade = injector.get(UpgradeModule) as UpgradeModule;
-
-    // The DOM must be already be available
     upgrade.bootstrap(document.body, [application], {strictDi: true});
 });
 </code></pre></p>
