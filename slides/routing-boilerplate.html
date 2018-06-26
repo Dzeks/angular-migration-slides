@@ -1,0 +1,7 @@
+<h2>Resolving data in angularjs</h2>
+
+<p><pre><code data-trim>
+resolve: {
+    companyWorkers: /* @ngInject */ (companyWorkersService, companyId) 
+        => companyWorkersService.getWorkers(companyId),
+</code></pre></p>

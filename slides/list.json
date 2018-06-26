@@ -1,12 +1,18 @@
 [
     "index.md",
     "our-current-state.html",
+    "what-we-ve-been-waiting-for.html",
     "why-do-we-migrate.html",
     "preparation.html",
     "upgrade-path.html",
     "bootstrap.html",
-    "bootstrap-1.html",
     "upgrade-router.html",
     "upgrade-router-pt2.html",
-    "downgrade-directive.html"
+    "routing-boilerplate.html",
+    "how-we-resolve-in-angular.html",
+    "upgrade-service.html",
+    "downgrade-directive.html",
+    "aot-setup.html",
+    "debugging.html",
+    "misc.html"
 ]

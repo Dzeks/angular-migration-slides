@@ -1,0 +1,26 @@
+<h2>How we resolve in Angular</h2>
+
+<p><pre><code data-trim>
+@Injectable()
+export class companyWorkersResolver implements Resolve<any>{
+    constructor(private companyWorkersService: companyWorkersService) {}
+    resolve(route: ActivatedRouteSnapshot) {
+        return companyWorkersService.getWorkers(route.queryParams.companyId);
+    }
+}
+
+@NgModule({
+    providers: [
+        companyWorkersResolver
+    ],
+    imports: [
+        RouterModule.forRoot([{
+            ...
+            resolve: {
+                companyWorkers: companyWorkersResolver
+            }
+        }])
+    ]
+})
+export class WAEditDetailsModule {}
+</code></pre></p>
